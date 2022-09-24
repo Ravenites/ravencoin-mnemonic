@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -32,10 +32,10 @@
     "trailingComma": "es5"
   },
   "name": "@ravenite/ravencoin-mnemonic",
-  "author": "Hyperbit",
+  "author": "Ravenite",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HyperbitLabs/ravencoin",
+    "url": "https://github.com/Ravenites/ravencoin-mnemonic",
     "directory": "packages/mnemonic"
   },
   "module": "dist/ravencoin-mnemonic.esm.js",
