@@ -1,10 +1,8 @@
 # Ravenite Mnemonic
 
 [![NPM Package](https://img.shields.io/npm/v/@ravenite/ravencoin-mnemonic.svg?style=flat-square)](https://www.npmjs.org/package/@ravenite/ravencoin-mnemonic)
-[![Build Status](https://img.shields.io/travis/@ravenite/ravencoin-mnemonic.svg?branch=master&style=flat-square)](https://travis-ci.org/@ravenite/ravencoin-mnemonic)
-[![Coverage Status](https://img.shields.io/coveralls/@ravenite/ravencoin-mnemonic.svg?style=flat-square)](https://coveralls.io/r/@ravenite/ravencoin-mnemonic)
 
-**A Hyberbit module for [ravencoin](https://github.com/hyperbitlabs/ravencoin) that implements Mnemonic code for generating deterministic keys.**
+**A Ravenite module for [ravencoin](https://github.com/RavenProject/Ravencoin) that implements Mnemonic code for generating deterministic keys.**
 
 ## Getting Started
 
