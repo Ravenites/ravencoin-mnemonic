@@ -1,4 +1,4 @@
-import bip39 from 'bip39';
+import * as bip39 from 'bip39';
 import CoinKey from 'coinkey';
 import HDKey from 'hdkey';
 
