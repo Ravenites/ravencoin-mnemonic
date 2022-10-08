@@ -2,7 +2,7 @@ export type Network = 'mainnet' | 'testnet';
 
 export type Options = {
   mnemonic?: string;
-  network?: Network;
+  network?: Network | string;
   passphrase?: string;
   language?: string;
   account?: number;
