@@ -44,7 +44,7 @@ export class Mnemonic {
     this.hdKey = this.toHDPrivateKey(this.mnemonic, options.network);
   }
 
-  private _getNetwork(name?: Network): Record<string, any> {
+  private _getNetwork(name?: Network | string): Record<string, any> {
     if (this.network) {
       return this.network;
     }
@@ -69,7 +69,7 @@ export class Mnemonic {
     return this.hdKey as HDKey;
   }
 
-  public toHDPrivateKey(mnemonic?: string, network?: Network): HDKey {
+  public toHDPrivateKey(mnemonic?: string, network?: Network | string): HDKey {
     const mn = mnemonic || (this.mnemonic as string);
     const nw = this.network || this._getNetwork(network);
     const seed = this.toHexString(bip39.mnemonicToSeedSync(mn));
@@ -138,8 +138,10 @@ export class Mnemonic {
       }
     }
 
-    const recievePath = `m/44'/175'/${this.account}'/0/${index}`;
-    const changePath = `m/44'/175'/${this.account}'/1/${index}`;
+    const bip44Version = this.network?.versions?.bip44 || testnet.versions.bip44;
+
+    const recievePath = `m/44'/${bip44Version}'/${this.account}'/0/${index}`;
+    const changePath = `m/44'/${bip44Version}'/${this.account}'/1/${index}`;
 
     const recieveAddress = this.generateAddress(recievePath);
     const changeAddress = this.generateAddress(changePath);
