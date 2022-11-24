@@ -951,6 +951,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@hypereon/chains@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@hypereon/chains/-/chains-0.0.4.tgz#894aac7d58d50952a0a77741264eae2349715e27"
+  integrity sha512-nuabJZe0vyXO+CijjFJByJvf1NEEJ57wlYGWq80x2nQk3Y4/C87hgoXlMgaNeg/YuGbPs+Mp+CVl5et6J0q8Hg==
+
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"

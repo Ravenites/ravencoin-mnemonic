@@ -1,4 +1,6 @@
-# Ravenite Mnemonic
+![Ravenite Mnemonic Banner](https://github.com/Ravenites/ravencoin-mnemonic/raw/main/media/repo-banner.png)
+
+# Ravenite - Ravencoin Mnemonic
 
 [![NPM Package](https://img.shields.io/npm/v/@ravenite/ravencoin-mnemonic.svg?style=flat-square)](https://www.npmjs.org/package/@ravenite/ravencoin-mnemonic)
 
@@ -8,10 +10,10 @@
 
 ```sh
 # Using npm
-npm install @ravenite/ravencoin-mnemonic;
+npm install @ravenite/ravencoin-mnemonic
 
 # Using yarn
-yarn add @ravenite/ravencoin-mnemonic;
+yarn add @ravenite/ravencoin-mnemonic
 ```
 
 ## Examples
