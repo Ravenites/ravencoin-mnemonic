@@ -1,8 +1,8 @@
 import * as bip39 from 'bip39';
 import CoinKey from 'coinkey';
 import HDKey from 'hdkey';
+import { rvn } from '@hypereon/chains';
 
-import { mainnet, testnet } from './lib';
 import {
   GenerateAddressSet,
   GeneratedAddress,
@@ -49,9 +49,9 @@ export class Mnemonic {
       return this.network;
     }
     if (name === 'mainnet') {
-      return mainnet;
+      return rvn.main;
     }
-    return testnet;
+    return rvn.test;
   }
 
   public toSeed(options: ToSeedOptions): Buffer {
@@ -138,7 +138,8 @@ export class Mnemonic {
       }
     }
 
-    const bip44Version = this.network?.versions?.bip44 || testnet.versions.bip44;
+    const bip44Version =
+      this.network?.versions?.bip44 || rvn.test.versions.bip44;
 
     const recievePath = `m/44'/${bip44Version}'/${this.account}'/0/${index}`;
     const changePath = `m/44'/${bip44Version}'/${this.account}'/1/${index}`;
