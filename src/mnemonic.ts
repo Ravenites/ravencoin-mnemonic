@@ -1,12 +1,11 @@
 import * as bip39 from 'bip39';
 import CoinKey from 'coinkey';
 import HDKey from 'hdkey';
-import { rvn } from '@hypereon/chains';
+import { rvn } from '@hyperbitjs/chains';
 
 import {
   GenerateAddressSet,
   GeneratedAddress,
-  Network,
   Options,
   ToSeedOptions,
 } from './types';
@@ -44,11 +43,11 @@ export class Mnemonic {
     this.hdKey = this.toHDPrivateKey(this.mnemonic, options.network);
   }
 
-  private _getNetwork(name?: Network | string): Record<string, any> {
+  private _getNetwork(name?: string): Record<string, any> {
     if (this.network) {
       return this.network;
     }
-    if (name === 'mainnet') {
+    if (name === 'mainnet' || name === 'main') {
       return rvn.main;
     }
     return rvn.test;
@@ -69,7 +68,7 @@ export class Mnemonic {
     return this.hdKey as HDKey;
   }
 
-  public toHDPrivateKey(mnemonic?: string, network?: Network | string): HDKey {
+  public toHDPrivateKey(mnemonic?: string, network?: string): HDKey {
     const mn = mnemonic || (this.mnemonic as string);
     const nw = this.network || this._getNetwork(network);
     const seed = this.toHexString(bip39.mnemonicToSeedSync(mn));

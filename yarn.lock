@@ -951,6 +951,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@hyperbitjs/chains@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@hyperbitjs/chains/-/chains-0.2.0.tgz#f96ed5ae2493ceb169698ef04cc407973a17a24c"
+  integrity sha512-E9z19XMDLx1yAH6yjijt0q7EeUY6fqlQ8n+HNJ/V2+Rlptbx1S8/tkCa3zMgYLDhymnajdHXe/0tKkQqnRRI5A==
+
 "@hypereon/chains@^0.0.4":
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/@hypereon/chains/-/chains-0.0.4.tgz#894aac7d58d50952a0a77741264eae2349715e27"
