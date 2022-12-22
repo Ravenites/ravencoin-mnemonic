@@ -1,10 +1,18 @@
-export type Network = 'mainnet' | 'testnet';
-
 export type Options = {
   mnemonic?: string;
-  network?: Network | string;
+  network?: 'mainnet' | 'main' | 'testnet' | 'test';
   passphrase?: string;
-  language?: string;
+  language?:
+    | 'chinese_simplified'
+    | 'chinese_traditional'
+    | 'czech'
+    | 'english'
+    | 'french'
+    | 'italian'
+    | 'japanese'
+    | 'korean'
+    | 'portuguese'
+    | 'spanish';
   account?: number;
 };
 

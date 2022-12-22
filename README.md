@@ -16,21 +16,42 @@ npm install @ravenite/ravencoin-mnemonic
 yarn add @ravenite/ravencoin-mnemonic
 ```
 
+## Usage
+
+```javascript
+import Mnemonic from '@ravenite/ravencoin-mnemonic';
+
+const code = new Mnemonic({ network: 'mainnet' });
+
+code.toString();
+```
+
+## Parameters
+
+| Name       | Type   | Default Value | Description                                                                       |
+| ---------- | ------ | ------------- | --------------------------------------------------------------------------------- |
+| mnemonic   | string | undefined     | Seed phrase (e.g. job shop small, etc...)                                         |
+| network    | string | testnet       | Blockchain network you are generating for                                         |
+| passphrase | string | undefined     | String to strengthen encryption with the seed phrase                              |
+| language   | string | english       | Language to generate seed phrase in                                               |
+| account    | number | undefined     | If you would like to start the receive and change path from a number other than 0 |
+
 ## Examples
 
 See [EXAMPLES.md](./EXAMPLES.md) for developer guides.
 
 ## Available Mnemonic Languages
-* chinese_simplified
-* chinese_traditional
-* czech
-* english
-* french
-* italian
-* japanese
-* korean
-* portuguese
-* spanish
+
+- chinese_simplified
+- chinese_traditional
+- czech
+- english
+- french
+- italian
+- japanese
+- korean
+- portuguese
+- spanish
 
 ## Contributing
 
