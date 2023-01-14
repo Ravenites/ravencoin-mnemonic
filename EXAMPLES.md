@@ -11,6 +11,7 @@ const code = new Mnemonic();
 ```javascript
 const code = new Mnemonic();
 code.toString();
+// output: test marine two right medal sentence believe now coil saddle cousin affair mercy
 ```
 
 ## Set network as mainnet

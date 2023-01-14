@@ -19,7 +19,7 @@ yarn add @ravenite/ravencoin-mnemonic
 ## Usage
 
 ```javascript
-import Mnemonic from '@ravenite/ravencoin-mnemonic';
+import { Mnemonic } from '@ravenite/ravencoin-mnemonic';
 
 const code = new Mnemonic({ network: 'mainnet' });
 
@@ -38,7 +38,7 @@ code.toString();
 
 ## Examples
 
-See [EXAMPLES.md](./EXAMPLES.md) for developer guides.
+See [EXAMPLES.md](https://github.com/Ravenites/ravencoin-mnemonic/blob/main/EXAMPLES.md) for developer guides.
 
 ## Available Mnemonic Languages
 

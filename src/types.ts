@@ -32,3 +32,10 @@ export type GeneratedAddress = {
   path: string;
   wif: string;
 };
+
+export type Inspect = {
+  mnemonic: string;
+  seed: Buffer;
+  hexString: string;
+  entropy: string;
+};
