@@ -6,31 +6,30 @@ import { rvn } from '@hyperbitjs/chains';
 import {
   GenerateAddressSet,
   GeneratedAddress,
+  Inspect,
   Options,
   ToSeedOptions,
 } from './types';
 
 export class Mnemonic {
-  public mnemonic: string | undefined = undefined;
-  public passphrase?: string;
-  public seed?: Buffer;
-  public network: Record<string, any> | undefined = undefined;
-  public hdKey: HDKey | undefined = undefined;
-  public static words: any = bip39.wordlists;
-  public account: number = 0;
-  public receiveAddresses = new Map();
-  public changeAddresses = new Map();
+  mnemonic: string;
+  passphrase?: string;
+  seed: Buffer;
+  network: Record<string, any> | undefined = undefined;
+  hdKey: HDKey | undefined = undefined;
+  static words: any = bip39.wordlists;
+  account: number = 0;
+  receiveAddresses = new Map();
+  changeAddresses = new Map();
 
   constructor(options: Options = {}) {
     if (options.language) {
       bip39.setDefaultWordlist(options.language);
     }
 
-    this._init(options);
-  }
-
-  private _init(options: Options) {
-    this.mnemonic = options.mnemonic || bip39.generateMnemonic();
+    this.mnemonic = options.mnemonic
+      ? options.mnemonic
+      : bip39.generateMnemonic();
     this.account = options.account || 0;
     this.passphrase = options.passphrase;
     this.seed = this.toSeed({
@@ -99,13 +98,17 @@ export class Mnemonic {
     return bip39.validateMnemonic(mnemonic);
   }
 
-  public inspect(): Record<string, string | Buffer | undefined> {
+  public inspect(): Inspect {
     return {
       mnemonic: this.mnemonic,
       seed: this.seed,
       hexString: this.toHexString(this.seed),
       entropy: bip39.mnemonicToEntropy(this.mnemonic as string),
     };
+  }
+
+  public toJSON(): Inspect {
+    return this.inspect();
   }
 
   /**
